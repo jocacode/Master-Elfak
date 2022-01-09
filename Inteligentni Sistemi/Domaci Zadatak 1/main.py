@@ -9,17 +9,17 @@ d = np.array([[0, 0, 12, 11, 14]
                  , [0, 15, 9, 0, 16]
                  , [0, 8, 14, 16, 0]])
 
+
 iteration = 100
-n_ants = 5
-n_citys = 5
+number_of_ants = 5
+number_of_citys = 5
 
-# intialization part
 
-m = n_ants
-n = n_citys
-e = .5  # evaporation rate
-alpha = 1  # pheromone factor
-beta = 2  # visibility factor
+m = number_of_ants
+n = number_of_citys
+e = .5  # Evaporation rate
+alpha = 1  # Pheromone factor
+beta = 2  # Visibility factor
 
 # calculating the visibility of the next city visibility(i,j)=1/d(i,j)
 
@@ -64,7 +64,7 @@ for ite in range(iteration):
 
             total = np.sum(combine_feature)  # sum of all the feature
 
-            probs = combine_feature / total  # finding probability of element probs(i) = comine_feature(i)/total
+            probs = combine_feature / total  # finding probability of element probs(i) = combine_feature(i)/total
 
             cum_prob = np.cumsum(probs)  # calculating cummulative sum
             # print(cum_prob)
