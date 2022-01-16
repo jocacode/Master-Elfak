@@ -15,7 +15,10 @@
   "dependencies": {
     "@types/node": "^17.0.8",
     "fastify": "^3.25.3",
+    "fastify-cors": "^6.0.2",
     "fastify-mongodb": "^4.1.1",
-    "fastify-swagger": "^4.13.1"
+    "fastify-plugin": "^3.0.0",
+    "fastify-swagger": "^4.13.1",
+    "mongoose": "^6.1.6"
   }
 }
