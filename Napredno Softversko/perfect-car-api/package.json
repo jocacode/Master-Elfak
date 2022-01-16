@@ -1,0 +1,21 @@
+{
+  "name": "perfect-car-api",
+  "author": "jocacode",
+  "version": "1.0.0",
+  "description": "Perfect Car API",
+  "main": "index.ts",
+  "scripts": {
+    "start": "pm2-dev start pm2.dev.config.js",
+    "build": "rm -rf dist && tsc"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.8",
+    "fastify": "^3.25.3",
+    "fastify-mongodb": "^4.1.1",
+    "fastify-swagger": "^4.13.1"
+  }
+}
