@@ -1,4 +1,4 @@
 import carRoutes from './car';
-import userRoutes from './user';
+import authRoutes from './auth';
 
-export default [...carRoutes, ...userRoutes];
+export default [...carRoutes, ...authRoutes];
