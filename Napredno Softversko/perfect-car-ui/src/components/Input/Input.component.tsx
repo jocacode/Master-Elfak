@@ -1,15 +1,19 @@
 import React from 'react';
-import {TextInput, View} from 'react-native';
+import {Text, TextInput, View} from 'react-native';
+import styles from './Input.styles';
 
 type InputProps = {
-  style?: Object;
+  componentStyle?: Object;
 };
 
 const Input: React.FC<InputProps> = (props: InputProps) => {
-  const {style} = props;
+  const {componentStyle} = props;
+
+  const cStyles = {...styles.input, ...componentStyle};
+
   return (
     <View>
-      <TextInput style={style} />
+      <TextInput onChangeText={value => console.log(value)} style={cStyles} />
     </View>
   );
 };
