@@ -25,7 +25,7 @@ const startServer = async () => {
 };
 
 fastify.addHook('preValidation', (request: FastifyRequest, _, done) => {
-  request.log.info({ body: request.body }, 'primljeni podaci');
+  request.log.info({ body: request.body }, 'Received Data');
   done();
 });
 

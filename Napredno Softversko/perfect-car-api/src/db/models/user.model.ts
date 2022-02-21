@@ -1,7 +1,7 @@
 import { Document, model, Schema } from 'mongoose';
 import validator from 'validator';
 
-interface IUser extends Document {
+export interface IUser extends Document {
   firstName: string;
   lastName: string;
   username: string;
@@ -27,4 +27,4 @@ const UserSchema = new Schema({
 
 const UserModel = model<IUser>('User', UserSchema);
 
-export { UserModel, UserSchema, IUser };
+export { UserModel, UserSchema };

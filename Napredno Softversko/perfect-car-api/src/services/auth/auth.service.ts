@@ -3,7 +3,7 @@ import { JWT_SECRET } from '../../config/server';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import { User } from '../../models/User';
-import { IUser } from '../../db/models/user.model';
+import { IUser, UserModel } from '../../db/models/user.model';
 import userService from '../user/user.service';
 
 export type AuthBody = {

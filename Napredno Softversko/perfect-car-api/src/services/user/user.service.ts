@@ -1,5 +1,5 @@
 import { IUser, UserModel } from '../../db/models/user.model';
-import { Document } from 'mongoose';
+import { Document, Model } from 'mongoose';
 import { User } from '../../models/User';
 import { escapeRegExp } from '../../utils/escape_regexp';
 
@@ -10,24 +10,24 @@ type IUserService = {
 };
 
 export class UserService implements IUserService {
-  user = UserModel;
+  public user: typeof UserModel;
+
+  constructor() {
+    this.user = UserModel;
+  }
 
   async createUser(userData: User) {
-    const user = await new UserModel(userData).save();
-
-    user.validate();
-
-    console.log(user);
-    return user;
+    return new this.user(userData).save();
   }
 
   async getUserById(userId: string) {
     const user = this.user.findOne({ _id: userId });
+
     if (!user) {
       throw Error('1002');
     }
 
-    return null;
+    return user;
   }
 
   async getByEmail(email: string) {

@@ -36,6 +36,16 @@ export const NUMBER_OF_DOORS = {
   '6/7': '6/7',
 } as const;
 
+export const NUMBER_OF_SEATS = {
+  1: '1',
+  2: '2',
+  3: '3',
+  4: '4',
+  5: '5',
+  6: '6',
+  7: '7',
+} as const;
+
 export const OPTIONAL_EQUIPMENT = {
   '4WD': '4WD',
   ABS: 'ABS',
